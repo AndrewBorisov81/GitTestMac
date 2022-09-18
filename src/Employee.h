@@ -1,37 +1,29 @@
 #pragma once
 
 #include <string>
+#include <memory>
 
  class EmployeeImpl;
 
 class Employee {
     public:
-      Employee(EmployeeImpl * p);
-      //Employee(EmployeeImpl * p, std::string name, int id);
+      Employee(std::unique_ptr<EmployeeImpl> p);
       virtual ~Employee();
-
       virtual void doWork() = 0;
-
-      //std::string getName() const;
-      //int getId() const;
-
-      //void helloEmployee();
-
-      //std::string m_name;
-      //int m_id;
-
     protected:
-       EmployeeImpl * pimpl;
-       //std::unique_ptr<EmployeeImpl> pimpl;
+       std::unique_ptr<EmployeeImpl> pimpl;
 };
 
 class Driver : public Employee {
     public:
-       Driver();
-       //Driver(std::string name, int id);
-       //virtual void driver_doWork();
-       //virtual void programmer_doWork();
+       Driver(std::string name, int id);
        void doWork() override;
+
+       std::string getName() const;
+       int getId() const;
+    private:
+       std::string m_name;
+       int m_id;
 };
 
 class Programmer : public Employee {

@@ -16,9 +16,11 @@ int main()
     }
     cout << endl;
 
-    Employee* driver = new Driver();
+    Driver* driver = new Driver("Andrew", 0331);
     driver->doWork();
+    std::cout << driver->getName() << '\n';
 
-    /*Employee* programmer = new Programmer();
-    programmer->doWork();*/
+    Employee* programmer = new Programmer();
+    programmer->doWork();
 }
+
