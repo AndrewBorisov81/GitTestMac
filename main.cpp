@@ -16,6 +16,6 @@ int main()
     }
     cout << endl;
 
-    /*DriverEmployee driverEmployee("Andrew", 0035);
-    driverEmployee.helloEmployee();*/
+    Employee* driver = new Driver();
+    driver->doWork();
 }

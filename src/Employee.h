@@ -2,41 +2,40 @@
 
 #include <string>
 
+ class EmployeeImpl;
+
 class Employee {
     public:
-      Employee();
-      Employee(std::string name, int id);
+      Employee(EmployeeImpl * p);
+      //Employee(EmployeeImpl * p, std::string name, int id);
       virtual ~Employee();
 
       virtual void doWork() = 0;
 
-      std::string getName() const;
-      int getId() const;
+      //std::string getName() const;
+      //int getId() const;
 
-      void helloEmployee();
+      //void helloEmployee();
+
+      //std::string m_name;
+      //int m_id;
 
     protected:
-       class EmployeeImpl;
        EmployeeImpl * pimpl;
        //std::unique_ptr<EmployeeImpl> pimpl;
 };
 
-class DriverEmployee : public Employee {
+class Driver : public Employee {
     public:
-        DriverEmployee(std::string, int id);
-        virtual void doWork() override;
-    private:
-        std::string m_name;
-        int m_id;
+       Driver();
+       //Driver(std::string name, int id);
+       //virtual void driver_doWork();
+       //virtual void programmer_doWork();
+       void doWork() override;
 };
 
+/*class Programmer : public Employee {
+    public:
+        Programmer();
 
-/*class ProgrammerEmployee : public Employee {
-      public:
-          ProgrammerEmployee(std::string, int id);
-          virtual void programmer_doWork();
-      private:
-          std::string m_name;
-          int m_id;      
 };*/
-

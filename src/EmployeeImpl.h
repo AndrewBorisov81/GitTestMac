@@ -2,22 +2,22 @@
 
 class EmployeeImpl {
     public:
-        EmployeeImpl();
-        EmployeeImpl(std::string name , int id);
-        virtual ~EmployeeImpl() {};
+        //EmployeeImpl();
+        //EmployeeImpl(std::string name , int id);
+        virtual ~EmployeeImpl();
         virtual void driver_doWork();
-        virtual void programmer_doWork();
-        void helloEmployee();
+        //virtual void programmer_doWork();
+        //void helloEmployee();
     protected:
-       std::string m_name;
-       int m_id;
+       //std::string m_name;
+       //int m_id;
 };
 
 class DriverImpl : public EmployeeImpl {
     public:
-       DriverImpl(std::string name, int id);
-       virtual void driver_doWork();
-       virtual void programmer_doWork();
+       //DriverImpl(std::string name, int id);
+       virtual void driver_doWork() override;
+       //virtual void programmer_doWork();
 };
 
 /*class ProgrammerImpl : public EmployeeImpl {
@@ -26,4 +26,3 @@ class DriverImpl : public EmployeeImpl {
        virtual void driver_doWork();
        virtual void programmer_doWork();
 };*/
-
