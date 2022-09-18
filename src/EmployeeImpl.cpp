@@ -9,8 +9,24 @@ void EmployeeImpl::driver_doWork() {
 
 }
 
+void EmployeeImpl::programmer_doWork() {
+
+}
+
 void DriverImpl::driver_doWork() {
     std::cout << "Driver do Work!" << "\n";
+}
+
+void DriverImpl::programmer_doWork() {
+    std::cout << "Programmer doWork!" << "\n";
+}
+
+void ProgrammerImpl::driver_doWork() {
+    std::cout << "Programmer doWork!" << "\n";
+}
+
+void ProgrammerImpl::programmer_doWork() {
+    std::cout << "Programmer doWork" << "\n";
 }
 
 /*void EmployeeImpl::programmer_doWork() {
@@ -36,5 +52,3 @@ DriverImpl::DriverImpl() {
 DriverImpl::DriverImpl(std::string name, int id) {
 
 }*/
-
-

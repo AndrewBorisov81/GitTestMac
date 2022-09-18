@@ -18,4 +18,7 @@ int main()
 
     Employee* driver = new Driver();
     driver->doWork();
+
+    /*Employee* programmer = new Programmer();
+    programmer->doWork();*/
 }

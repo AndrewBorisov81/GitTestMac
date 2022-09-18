@@ -19,6 +19,14 @@ void Driver::doWork() {
     pimpl->driver_doWork();
 }
 
+Programmer::Programmer() : Employee(new ProgrammerImpl()) {
+
+}
+
+void Programmer::doWork() {
+    pimpl->programmer_doWork();
+}
+
 /*Employee::Employee(EmployeeImpl * p, std::string name, int id): pimpl{p} {
 
 }*/
